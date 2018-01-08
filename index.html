@@ -1,62 +1,47 @@
-<!DOCTYPE HTML>
-<html ng-app="myApp">
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="rentfinds" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="rentfinds" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="rentfinds" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="rentfinds" class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    
-    <link rel="stylesheet" href="css/topcoat/topcoat-mobile-light.css">
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
-    
-    <script src="js/lib/fastclick.js"></script>
-    <script src="js/lib/angular.js"></script>
-    <script src="js/lib/angular_animate.js"></script>
-    
-    <script src="todo.js"></script>
-   
-   <script>
-        // initialize myApp
-        var myApp = angular.module('myApp', ['ngAnimate']);
-        
-        // fast click
-        window.addEventListener('load', function() {
-            FastClick.attach(document.body);
-        }, false);
-    </script>
-
-    
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RentFinds</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+  <link rel="stylesheet" href="app.css">
 </head>
-<body ng-controller="TodoController">
-    
-    <!-- Navigation Bar -->
-   <!--  <div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item center full">
-            <h1 class="topcoat-navigation-bar__title">Todo</h1>
-        </div>
-    </div> -->
-
-    <div class="title-bar">
+<body>
+  <div class="title-bar">
   <div class="title-bar-title">Rent Finds</div>
   </div>
-    
-    <!-- List -->
-    <div class="topcoat-list">
-    
-        <h3 class="topcoat-list__header">
-            <form name="todoForm" ng-submit="addTodo(newTodo);">
-                <input type="text" ng-model="newTodo" class="topcoat-text-input" required>
-                <button type="submit" class="topcoat-button float-right" ng-disabled="!todoForm.$valid">+</button>
-            </form>
-        </h3>
-    
-        <ul class="topcoat-list__container">
-            <li class="topcoat-list__item my-repeat-animation" ng-repeat="todo in todos">
-                <h3 class="float-left">{{todo.text}}</h3>
-                <span class="topcoat-icon-button--quiet float-right" ng-click="removeTodo($index)">X</span>
-                <div class="clear"></div>
-            </li>
-        </ul>
-    </div>
 
+  <div ng-view></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCtBborjo1wEIeb1Ex0iDrNAAevwovFr80",
+    authDomain: "rentapp-b31df.firebaseapp.com",
+    databaseURL: "https://rentapp-b31df.firebaseio.com",
+    projectId: "rentapp-b31df",
+    storageBucket: "rentapp-b31df.appspot.com",
+    messagingSenderId: "311462303296"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="bower_components/angular/angular.js"></script>     
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.js"></script>
+  <script src="bower_components/foundation/js/foundation.js"></script>
+  <script src="app.js"></script>
+  <script src="rentals/rentals.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://jsconsole.com/remote.js?82F99251-54C6-42AC-9981-476AED6A45C2"></script>
 </body>
 </html>
