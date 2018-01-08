@@ -1,6 +1,6 @@
 /* app css stylesheet */
 
-.menu {
+/*.menu {
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
@@ -22,13 +22,13 @@
 .menu > li:before {
   content: "|";
   padding-right: 0.3em;
-}
+}*/
 
-.menu > li:nth-child(1):before {
+/*.menu > li:nth-child(1):before {
   content: "";
   padding: 0;
 }
-
+*/
 header{
   text-align: center;
   background:#f4f4f4;
@@ -48,7 +48,7 @@ header h1{
 }
 
 .page-heading{
-  background: #f57a00;
+  background: green;
   color:#fff;
   text-align: center;
   padding:5px;
@@ -56,7 +56,7 @@ header h1{
 }
 
 .details img{
-  width:100%;
+  width:60%;
 }
 
 .actions{
